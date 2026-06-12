@@ -1,3 +1,5 @@
+/* ================= PROJECTS PAGE ================= */
+
 .projects-page{
     padding:80px 10%;
     text-align:center;
@@ -18,7 +20,7 @@
     line-height:1.8;
 }
 
-/* Stats */
+/* ================= STATS ================= */
 
 .stats-container{
     display:flex;
@@ -34,18 +36,26 @@
     padding:25px;
     border-radius:20px;
     box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.stat-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(79,195,247,0.3);
 }
 
 .stat-box h2{
     color:#0288d1;
     font-size:40px;
+    margin-bottom:10px;
 }
 
 .stat-box p{
     color:#555;
+    font-size:16px;
 }
 
-/* Projects */
+/* ================= PROJECT CARDS ================= */
 
 .project-container{
     display:grid;
@@ -77,6 +87,8 @@
     line-height:1.7;
 }
 
+/* ================= TECH STACK ================= */
+
 .tech-stack{
     margin:20px 0;
 }
@@ -90,24 +102,42 @@
     border-radius:20px;
     font-size:14px;
     font-weight:600;
+    transition:0.3s;
 }
+
+.tech-stack span:hover{
+    background:#0288d1;
+    color:white;
+}
+
+/* ================= GITHUB BUTTON ================= */
 
 .github-btn{
     display:inline-block;
     margin-top:15px;
     padding:12px 25px;
-    background:linear-gradient(135deg,#87ceeb,#4fc3f7);
+    background:linear-gradient(
+        135deg,
+        #87ceeb,
+        #4fc3f7
+    );
     color:white;
     text-decoration:none;
     border-radius:30px;
     font-weight:bold;
+    transition:0.4s;
 }
 
 .github-btn:hover{
-    background:linear-gradient(135deg,#0288d1,#03a9f4);
+    transform:translateY(-4px);
+    background:linear-gradient(
+        135deg,
+        #0288d1,
+        #03a9f4
+    );
 }
 
-/* CTA */
+/* ================= CTA SECTION ================= */
 
 .project-cta{
     text-align:center;
@@ -135,10 +165,19 @@
     text-decoration:none;
     border-radius:30px;
     font-weight:600;
+    transition:0.4s;
 }
+
+.contact-btn:hover{
+    background:#01579b;
+    transform:translateY(-4px);
+}
+
+/* ================= FOOTER ================= */
+
 .footer{
     background:#d6f0ff;
-    padding:12px 0;
+    padding:15px;
     text-align:center;
     border-top:1px solid #b3e5fc;
 }
@@ -158,4 +197,110 @@
 
 .footer a:hover{
     color:#01579b;
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:992px){
+
+    .projects-page{
+        padding:70px 6%;
+    }
+
+    .projects-page h1{
+        font-size:45px;
+    }
+
+    .project-container{
+        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    }
+
+    .project-cta h2{
+        font-size:36px;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .projects-page{
+        padding:60px 5%;
+    }
+
+    .projects-page h1{
+        font-size:34px;
+    }
+
+    .project-subtitle{
+        font-size:16px;
+    }
+
+    .stat-box{
+        width:100%;
+        max-width:280px;
+    }
+
+    .stat-box h2{
+        font-size:32px;
+    }
+
+    .project-container{
+        grid-template-columns:1fr;
+    }
+
+    .project-card{
+        padding:25px;
+    }
+
+    .project-cta{
+        padding:60px 5%;
+    }
+
+    .project-cta h2{
+        font-size:30px;
+    }
+
+    .project-cta p{
+        font-size:16px;
+    }
+
+    .contact-btn{
+        width:100%;
+        max-width:250px;
+    }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width:480px){
+
+    .projects-page h1{
+        font-size:28px;
+    }
+
+    .project-card{
+        padding:20px;
+    }
+
+    .project-card h2{
+        font-size:22px;
+    }
+
+    .project-card p{
+        font-size:15px;
+    }
+
+    .tech-stack span{
+        font-size:12px;
+        padding:6px 12px;
+    }
+
+    .project-cta h2{
+        font-size:26px;
+    }
+
+    .project-cta p{
+        font-size:15px;
+    }
 }

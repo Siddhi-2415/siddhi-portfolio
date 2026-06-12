@@ -1,3 +1,5 @@
+/* ================= ABOUT PAGE ================= */
+
 .about-page{
     padding:80px 10%;
     background:#f5fcff;
@@ -11,18 +13,31 @@
     flex-wrap:wrap;
 }
 
+.about-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
 .about-image img{
     width:350px;
-    height:350px;
+    max-width:100%;
+    height:auto;
+    aspect-ratio:1/1;
     object-fit:cover;
     border-radius:20px;
     box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    filter:brightness(120%);
+    transition:0.4s ease;
+}
 
-    filter: brightness(120%);
+.about-image img:hover{
+    transform:scale(1.05);
 }
 
 .about-content{
     flex:1;
+    min-width:300px;
 }
 
 .about-content h1{
@@ -37,6 +52,8 @@
     color:#555;
     margin-bottom:15px;
 }
+
+/* ================= EDUCATION ================= */
 
 .education{
     padding:70px 12%;
@@ -58,23 +75,29 @@
     border-radius:15px;
     box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
-.skill-title{
-    font-size:48px;
-    font-weight:700;
-    color:#003366;
-    text-align:center;
-    margin-bottom:40px;
+
+.edu-card h3{
+    color:#0288d1;
+    margin-bottom:10px;
 }
 
+.edu-card p{
+    color:#555;
+    line-height:1.7;
+}
+
+/* ================= SKILLS ================= */
 
 .skills{
     padding:70px 10%;
     text-align:center;
-    background:#eaf8ff;
+    background:#f5fcff;
 }
 
+.skill-title,
 .skills h2{
     font-size:42px;
+    font-weight:700;
     color:#003366;
     margin-bottom:40px;
 }
@@ -98,13 +121,14 @@
     box-shadow:0 5px 15px rgba(79,195,247,0.4);
 }
 
-/* Attractive Hover Effect */
 .skill-container span:hover{
     transform:translateY(-8px) scale(1.08);
     background:linear-gradient(135deg,#0288d1,#03a9f4);
     box-shadow:0 12px 25px rgba(2,136,209,0.5);
     letter-spacing:1px;
 }
+
+/* ================= OBJECTIVE ================= */
 
 .objective{
     padding:70px 12%;
@@ -126,15 +150,16 @@
     color:#555;
 }
 
+/* ================= FOOTER ================= */
+
 .footer{
     background:#d6f0ff;
-    padding:12px 0;
+    padding:15px;
     text-align:center;
     border-top:1px solid #b3e5fc;
 }
 
 .footer p{
-    margin:0;
     font-size:14px;
     color:#003366;
 }
@@ -148,4 +173,92 @@
 
 .footer a:hover{
     color:#01579b;
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:992px){
+
+    .about-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .about-content h1{
+        font-size:40px;
+    }
+
+    .about-image img{
+        width:300px;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .about-page,
+    .education,
+    .skills,
+    .objective{
+        padding:60px 6%;
+    }
+
+    .about-content h1{
+        font-size:32px;
+    }
+
+    .education h2,
+    .skills h2,
+    .objective h2{
+        font-size:30px;
+    }
+
+    .about-content p,
+    .objective p{
+        font-size:16px;
+    }
+
+    .skill-container{
+        gap:15px;
+    }
+
+    .skill-container span{
+        font-size:16px;
+        padding:12px 22px;
+    }
+
+    .about-image img{
+        width:250px;
+    }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width:480px){
+
+    .about-content h1{
+        font-size:28px;
+    }
+
+    .education h2,
+    .skills h2,
+    .objective h2{
+        font-size:26px;
+    }
+
+    .about-content p,
+    .objective p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .about-image img{
+        width:220px;
+    }
+
+    .skill-container span{
+        width:100%;
+        max-width:220px;
+    }
 }
