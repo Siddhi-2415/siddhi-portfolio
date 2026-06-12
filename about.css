@@ -1,0 +1,151 @@
+.about-page{
+    padding:80px 10%;
+    background:#f5fcff;
+}
+
+.about-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.about-image img{
+    width:350px;
+    height:350px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+    filter: brightness(120%);
+}
+
+.about-content{
+    flex:1;
+}
+
+.about-content h1{
+    font-size:48px;
+    color:#003366;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    font-size:18px;
+    line-height:1.8;
+    color:#555;
+    margin-bottom:15px;
+}
+
+.education{
+    padding:70px 12%;
+    background:#eaf8ff;
+    text-align:center;
+}
+
+.education h2{
+    font-size:38px;
+    color:#003366;
+    margin-bottom:30px;
+}
+
+.edu-card{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+.skill-title{
+    font-size:48px;
+    font-weight:700;
+    color:#003366;
+    text-align:center;
+    margin-bottom:40px;
+}
+
+
+.skills{
+    padding:70px 10%;
+    text-align:center;
+    background:#eaf8ff;
+}
+
+.skills h2{
+    font-size:42px;
+    color:#003366;
+    margin-bottom:40px;
+}
+
+.skill-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.skill-container span{
+    padding:15px 30px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#87ceeb,#4fc3f7);
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:all 0.4s ease;
+    box-shadow:0 5px 15px rgba(79,195,247,0.4);
+}
+
+/* Attractive Hover Effect */
+.skill-container span:hover{
+    transform:translateY(-8px) scale(1.08);
+    background:linear-gradient(135deg,#0288d1,#03a9f4);
+    box-shadow:0 12px 25px rgba(2,136,209,0.5);
+    letter-spacing:1px;
+}
+
+.objective{
+    padding:70px 12%;
+    text-align:center;
+    background:#eaf8ff;
+}
+
+.objective h2{
+    font-size:38px;
+    color:#003366;
+    margin-bottom:25px;
+}
+
+.objective p{
+    max-width:800px;
+    margin:auto;
+    font-size:20px;
+    line-height:1.8;
+    color:#555;
+}
+
+.footer{
+    background:#d6f0ff;
+    padding:12px 0;
+    text-align:center;
+    border-top:1px solid #b3e5fc;
+}
+
+.footer p{
+    margin:0;
+    font-size:14px;
+    color:#003366;
+}
+
+.footer a{
+    text-decoration:none;
+    color:#0288d1;
+    margin:0 8px;
+    font-weight:500;
+}
+
+.footer a:hover{
+    color:#01579b;
+}
